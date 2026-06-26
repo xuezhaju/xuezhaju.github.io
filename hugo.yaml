@@ -1,44 +1,154 @@
+# ============================================
+# 基础配置
+# ============================================
+
+# 网站的基础 URL，必须与您的 GitHub Pages 地址完全一致
+# 作用：生成绝对路径，确保 RSS、sitemap 等链接正确
 baseURL: "https://xuezhaju.github.io/"
+
+# 网站的语言代码
+# 作用：影响日期格式、HTML 语言属性等，zh-cn 表示简体中文
 languageCode: "zh-cn"
+
+# 网站的标题，显示在浏览器标签栏和页面标题中
 title: "xuezhaju的博客"
+
+# 使用的 Hugo 主题名称，必须与 themes/ 目录下的文件夹名一致
 theme: "PaperMod"
+
+# 是否生成 robots.txt 文件
+# 作用：告诉搜索引擎爬虫哪些页面可以抓取，一般设为 true
 enableRobotsTXT: true
+
+# 是否构建草稿文章（draft: true 的文章）
+# false = 草稿不会出现在生产环境中，适合未完成的内容
 buildDrafts: false
+
+# 是否构建未来文章（date 设置为未来时间的文章）
+# false = 未来的文章不会提前发布
 buildFuture: false
+
+# 是否构建过期文章（expiryDate 已过的文章）
+# false = 过期的文章不会显示
 buildExpired: false
 
+
+# ============================================
+# 压缩优化配置
+# ============================================
+
 minify:
+  # 是否禁用 XML 压缩（影响 RSS、Sitemap）
+  # true = 保留 XML 格式，便于阅读
   disableXML: true
+  # 是否压缩 HTML/CSS/JS 输出
+  # true = 去除空格和注释，减小文件大小
   minifyOutput: true
 
+
+# ============================================
+# 参数配置（核心展示内容）
+# ============================================
+
 params:
+  # 运行环境，production 表示生产环境
+  # 作用：影响部分功能是否启用（如分析统计）
   env: production
+
+  # 网站标题（显示在页面标题栏，可带表情符号）
   title: "xuezhaju的博客 | 🇨🇳"
+
+  # 网站描述（显示在搜索引擎结果和页面 meta 中）
   description: "个人技术博客"
+
+  # 网站关键词（用于 SEO，方便搜索引擎索引）
   keywords: [Blog, Portfolio, Go]
+
+  # 作者名称
   author: "xuezhaju"
+
+  # 日期显示格式
+  # 作用：控制文章日期在页面上的显示样式
   DateFormat: "2026年06月26日"
+
+  # 默认主题颜色模式
+  # auto = 跟随系统设置（暗色/亮色自动切换）
+  # light = 强制亮色，dark = 强制暗色
   defaultTheme: auto
+
+  # 是否禁用主题切换按钮（用户手动切换亮色/暗色）
+  # false = 显示切换按钮，用户可自由切换
   disableThemeToggle: false
 
+
+# ============================================
+# 文章页面显示选项
+# ============================================
+
+  # 是否显示预计阅读时间（如"阅读时间：3 分钟"）
   ShowReadingTime: true
+
+  # 是否显示分享按钮（分享到 Twitter、Facebook 等）
   ShowShareButtons: true
+
+  # 是否在文章底部显示"上一篇/下一篇"导航链接
   ShowPostNavLinks: true
+
+  # 是否显示面包屑导航（如 首页 > 文章 > 分类 > 标题）
   ShowBreadCrumbs: true
+
+  # 是否在代码块上显示"复制"按钮（方便读者复制代码）
   ShowCodeCopyButtons: true
+
+  # 是否显示文章字数统计（如"字数：1200 字"）
   ShowWordCount: true
+
+  # 是否在分类/标签列表页显示 RSS 订阅按钮
   ShowRssButtonInSectionTermList: true
+
+  # 是否使用 Hugo 内置的目录生成功能
+  # true = 自动根据文章标题生成目录（TOC）
   UseHugoToc: true
+
+  # 是否禁用第一篇特殊文章样式
+  # false = 第一篇特殊文章有特殊样式（如置顶效果）
   disableSpecial1stPost: false
+
+  # 是否禁用回到顶部按钮
+  # false = 显示回到顶部按钮（滚动到页面底部时出现）
   disableScrollToTop: false
+
+  # 是否禁用评论功能
+  # false = 不显示评论区（如需启用需配置评论系统如 Disqus）
   comments: false
+
+  # 是否隐藏文章元数据（日期、作者、字数等）
+  # false = 显示元数据
   hidemeta: false
+
+  # 是否在列表页隐藏文章摘要
+  # false = 显示摘要
   hideSummary: false
+
+  # 是否显示目录（TOC）
+  # false = 不自动显示目录（需手动在文章 front matter 中设置）
   showtoc: false
+
+  # 目录是否默认展开
+  # false = 目录默认收起，读者可点击展开
   tocopen: false
 
+
+# ============================================
+# 首页信息配置（homeInfoParams）
+# ============================================
+
   homeInfoParams:
+    # 首页显示的大标题（可带表情符号）
     Title: "👋 你好，我是xuezhaju"
+    
+    # 首页显示的正文内容（支持 Markdown 格式）
+    # | 符号表示多行文本，缩进表示内容
     Content: |
       欢迎来到我的个人网站！
 
@@ -46,20 +156,123 @@ params:
       - 喜欢折腾 **cpp** 和 **Godot**
       - 这个博客用 **Hugo** + **PaperMod** 主题搭建
 
+
+# ============================================
+# 社交图标配置
+# ============================================
+
   socialIcons:
+    # 每个社交图标：name 对应图标名称，url 对应链接
     - name: "github"
       url: "https://github.com/xuezhaju"
     - name: "bilibili"
       url: "https://space.bilibili.com/3493127857900357"
 
 
+# ============================================
+# 导航菜单配置
+# ============================================
+
 menu:
   main:
-    - identifier: posts
-      name: 文章
-      url: /posts/
-      weight: 10
+    # 文章列表页菜单项
+    - identifier: posts      # 唯一标识符
+      name: 文章             # 菜单显示的文字
+      url: /posts/          # 点击后跳转的链接
+      weight: 10            # 排序权重（数字越小越靠前）
+
+    # 关于页面菜单项
     - identifier: about
       name: 关于
       url: /about/
       weight: 20
+
+## ============================================
+# 可选扩展配置
+# ============================================
+
+# 分页设置（控制每页显示的文章数量）
+paginate: 10
+paginatePath: "page"
+
+# 摘要长度（控制列表页文章摘要显示的字数）
+summaryLength: 70
+
+# 是否启用 Emoji 支持（让 Hugo 识别 :emoji: 语法）
+enableEmoji: true
+
+# 是否启用 Git 信息集成（显示最后修改时间）
+enableGitInfo: false
+
+# 分类和标签的 URL 风格
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+# 自定义输出格式（如 AMP、JSON 等）
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+
+# 自定义 Markdown 渲染
+markup:
+  highlight:
+    # 代码高亮样式
+    style: "dracula"
+    # 是否显示行号
+    lineNos: false
+  goldmark:
+    renderer:
+      # 是否允许不安全的 HTML 标签
+      unsafe: false
+
+# 自定义页脚版权信息
+copyright: "© 2026 xuezhaju. 保留所有权利。" ============================================
+# 可选扩展配置
+# ============================================
+
+# 分页设置（控制每页显示的文章数量）
+paginate: 10
+paginatePath: "page"
+
+# 摘要长度（控制列表页文章摘要显示的字数）
+summaryLength: 70
+
+# 是否启用 Emoji 支持（让 Hugo 识别 :emoji: 语法）
+enableEmoji: true
+
+# 是否启用 Git 信息集成（显示最后修改时间）
+enableGitInfo: false
+
+# 分类和标签的 URL 风格
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+# 自定义输出格式（如 AMP、JSON 等）
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+
+# 自定义 Markdown 渲染
+markup:
+  highlight:
+    # 代码高亮样式
+    style: "dracula"
+    # 是否显示行号
+    lineNos: false
+  goldmark:
+    renderer:
+      # 是否允许不安全的 HTML 标签
+      unsafe: false
+
+# 自定义页脚版权信息
+copyright: "© 2026 xuezhaju. 保留所有权利。"
