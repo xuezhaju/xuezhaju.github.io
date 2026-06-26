@@ -1,8 +1,9 @@
+---
 title: "QWQ"
 date: 2026-06-26
 draft: false
-tags: ["QWQ"]
-categories: ["QWQ"]
+tags: ["生活"]
+categories: ["随笔"]
 ---
 
 # QWQ
