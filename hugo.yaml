@@ -89,7 +89,7 @@ params:
   ShowReadingTime: true
 
   # 是否显示分享按钮（分享到 Twitter、Facebook 等）
-  ShowShareButtons: true
+  ShowShareButtons: false
 
   # 是否在文章底部显示"上一篇/下一篇"导航链接
   ShowPostNavLinks: true
@@ -231,4 +231,4 @@ markup:
       unsafe: false
 
 # 自定义页脚版权信息
-copyright: "© 2026 xuezhaju. 保留所有权利。" 
+copyright: "© 202# QWQ6 xuezhaju. 保留所有权利。" 
