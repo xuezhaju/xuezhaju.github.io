@@ -13,7 +13,7 @@ minify:
 
 params:
   env: production
-  title: "xuezhaju的博客"
+  title: "xuezhaju的博客 | 🇨🇳"
   description: "个人技术博客"
   keywords: [Blog, Portfolio, Go]
   author: "xuezhaju"
@@ -42,13 +42,16 @@ params:
     Content: |
       欢迎来到我的个人网站！
 
-      - 正在学习 **Go 语言** 和 Web 开发
-      - 喜欢折腾cpp和godot
+      - 正在学习 **C++ 语言**
+      - 喜欢折腾 **cpp** 和 **Godot**
       - 这个博客用 **Hugo** + **PaperMod** 主题搭建
 
   socialIcons:
     - name: "github"
       url: "https://github.com/xuezhaju"
+    - name: "bilibili"
+      url: "https://space.bilibili.com/3493127857900357"
+
 
 menu:
   main:
